@@ -44,6 +44,38 @@ public class SquareSum
              
              return table[n];
         }
-        
+        else
+        {
+            /*
+             * The value has yet to be calculated.
+             * So we use the formula
+             * p(n) = min_{1<=i<=n}(p(i) + p(n - i)) 
+             * to find the value.
+             */
+             
+            
+             int min = n;
+             
+             /*
+              * we first give the largest value possible to min, which is n,
+              * since it is the case where the value is expressed in
+              * n 1's
+              */
+              
+             int tempSum = 0;
+             
+             for(int i = 1; i <= n - 1; i++)
+             {
+                 tempSum = minimumSquareSum(i) + minimumSquareSum(n - i);
+                 
+                 if(min > tempSum)
+                 {
+                     min = tempSum;
+                 }
+             }
+             
+             table[n] = min;
+             return table[n];
+        }
     }
 }
