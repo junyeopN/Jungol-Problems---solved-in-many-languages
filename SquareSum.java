@@ -7,6 +7,7 @@
  * the minimum square sum problem.
  */
 
+import java.util.Scanner;
 
 public class SquareSum
 {
@@ -77,5 +78,33 @@ public class SquareSum
              table[n] = min;
              return table[n];
         }
+    }
+    
+    public static void main(String args[])
+    {
+        Scanner s = new Scanner(System.in);
+        int input;
+        
+        input = s.nextInt();
+        
+        /*
+         * We give table n + 1 entries,
+         * because we need to use entries upto table[n].
+         */
+         
+        table = new int[input + 1];
+        
+        
+        /*
+         * We initialize the table by making
+         * all the square number's entries' value 1
+         */
+         
+        for(int i = 1; i*i <= n; i++)
+        {
+            table[i*i] = 1;
+        }
+        
+        System.out.println(minimumSquareSum(input));
     }
 }
