@@ -26,7 +26,7 @@ public class SquareSum
      * to find the value. Then we record it to the table
      * before returning the value.
      */
-    int minimumSquareSum(int n)
+    static int minimumSquareSum(int n)
     {
         if(table[n] != 0)
         {
@@ -100,7 +100,7 @@ public class SquareSum
          * all the square number's entries' value 1
          */
          
-        for(int i = 1; i*i <= n; i++)
+        for(int i = 1; i*i <= input; i++)
         {
             table[i*i] = 1;
         }
