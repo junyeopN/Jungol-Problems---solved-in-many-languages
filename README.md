@@ -1,2 +1,8 @@
 # Jungol-Problems---solved-in-many-languages
-We solve many olympiad problems that are given in jungol.co.kr
+minimum square sum problem
+We solved it primarily using dynamic programming...
+But I wonder
+
+1) Will Greedy Algorithm work?
+
+2) If it does, which one is faster?
