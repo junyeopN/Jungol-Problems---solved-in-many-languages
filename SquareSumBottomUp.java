@@ -31,7 +31,7 @@ public class SquareSumBottomUp
          * because we need to use entries upto table[n].
          */
          
-        table = new int[input + 1];
+        int[] table = new int[input + 1];
         
         
         /*
@@ -63,28 +63,34 @@ public class SquareSumBottomUp
               * square sums a number can be represented by is by the sum
               * of 1's as many as the value of the number itself.
               */
-              
-             min = i;
-             
-             for(int j = 1; j < i; j++)
+             if(table[i] != 1)
              {
                  /*
-                  * we determine the value of table[i]
-                  * inside this for loop.
+                  * if i is not a square number
                   */
-                if((table[j] + table[i - j]) < min)
-                {
-                    min = table[j];
-                }
+                 min = i;
+    
+                 for(int j = 1; j < i; j++)
+                 {
+                     /*
+                      * we determine the value of table[i]
+                      * inside this for loop.
+                      */
+                    if((table[j] + table[i - j]) < min)
+                    {
+                        min = table[j] + table[i - j];
+                    }
+                 }
+                 
+                 /*
+                  * After the second for loop ends, the number of
+                  * minimum square sum for p(i) will be stored in
+                  * min. So we store this value to table[i].
+                  */
+                 
+                 table[i] = min;
+            
              }
-             
-             /*
-              * After the second for loop ends, the number of
-              * minimum square sum for p(i) will be stored in
-              * min. So we store this value to table[i].
-              */
-             
-             table[i] = min;
         }
         
         System.out.println(table[input]);
