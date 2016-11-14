@@ -26,11 +26,11 @@ class DoublyLinkedList
 
         DoublyLinkedList* get_prev();
         
-        void set_prev(DoublyLinkedList input);
+        void set_prev(DoublyLinkedList *input);
         
         DoublyLinkedList* get_next();
         
-        void set_next(DoublyLinkedList input);
+        void set_next(DoublyLinkedList *input);
         
         
     private:
