@@ -5,7 +5,7 @@
  * Code defining the methods of the class CircularLinkedList.
  */
 
-CircularLInkedList::CircularLinkedList(int input)
+DoublyLinkedList::DoublyLinkedList(int input)
 {
     /*
      * A constructor for initializing a node
@@ -16,32 +16,32 @@ CircularLInkedList::CircularLinkedList(int input)
     this.prev = NULL;
 }
 
-int CircularLinkedList::get_value()
+int DoublyLinkedList::get_value()
 {
     return value;
 }
 
-void CircularLinkedList::set_value(int input)
+void DoublyLinkedList::set_value(int input)
 {
     this.value = input;
 }
 
-CircularLinkedList* CircularLinkedList::get_prev()
+DoublyLinkedList* DoublyLinkedList::get_prev()
 {
     return this.prev;
 }
 
-void CircularLinkedList::set_prev(CircularLinkedList input)
+void DoublyLinkedList::set_prev(DoublyLinkedList input)
 {
     prev = &input;
 }
 
-CircularLinkedList* CircularLinkedList::get_next()
+DoublyLinkedList* DoublyLinkedList::get_next()
 {
     return this.next;
 }
 
-void CircularLinkedList::set_next(CircularLinkedList input)
+void DoublyLinkedList::set_next(DoublyLinkedList input)
 {
     next = &input;
 }
