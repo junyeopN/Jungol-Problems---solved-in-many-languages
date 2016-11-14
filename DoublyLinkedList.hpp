@@ -1,7 +1,7 @@
 /*
- * A header file that defines a circular linked list
+ * A header file that defines a doubly linked list
  * that will be used in our solution for the Erathosthenes problem.
- * A circular linked list is a node with a value and two pointers,
+ * A doubly linked list is a node with a value and two pointers,
  * which are the node that follows this node and the node that
  * comes before this node. This makes it more easy to erase nodes
  * from a list, since we simply need to connect the previous node (which is 
@@ -11,31 +11,31 @@
  */
 
 
-#ifndef CIRCULARLINKEDLIST_H
-#define CIRCULARLINKEDLIST_H
+#ifndef DOUBLYLINKEDLIST_H
+#define DOUBLYLINKEDLIST_H
 
-class CircularLinkedList
+class DoublyLinkedList
 {
 
     public:
-        CircularLinkedList(int input);
+        DoublyLinkedList(int input);
     
         int get_value();
     
         void set_value(int input);
 
-        CircularLinkedList* get_prev();
+        DoublyLinkedList* get_prev();
         
-        void set_prev(CircularLinkedList input);
+        void set_prev(DoublyLinkedList input);
         
-        CircularLinkedList* get_next();
+        DoublyLinkedList* get_next();
         
-        void set_next(CircularLinkedList input);
+        void set_next(DoublyLinkedList input);
         
         
     private:
         int value;
-        CircularLinkedList *prev;
-        CircularLinkedList *next;
+        DoublyLinkedList *prev;
+        DoublyLinkedList *next;
 }
 #endif
