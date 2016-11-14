@@ -31,9 +31,9 @@ DoublyLinkedList* DoublyLinkedList::get_prev()
     return this->prev;
 }
 
-void DoublyLinkedList::set_prev(DoublyLinkedList input)
+void DoublyLinkedList::set_prev(DoublyLinkedList *input)
 {
-    prev = &input;
+    prev = input;
 }
 
 DoublyLinkedList* DoublyLinkedList::get_next()
@@ -41,7 +41,7 @@ DoublyLinkedList* DoublyLinkedList::get_next()
     return this->next;
 }
 
-void DoublyLinkedList::set_next(DoublyLinkedList input)
+void DoublyLinkedList::set_next(DoublyLinkedList *input)
 {
-    next = &input;
+    next = input;
 }
