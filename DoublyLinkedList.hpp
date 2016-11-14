@@ -14,7 +14,7 @@
 #ifndef DOUBLYLINKEDLIST_H
 #define DOUBLYLINKEDLIST_H
 
-class DoublyLinkedList;
+class DoublyLinkedList
 {
 
     public:
@@ -37,5 +37,5 @@ class DoublyLinkedList;
         int value;
         DoublyLinkedList *prev;
         DoublyLinkedList *next;
-}
+};
 #endif
