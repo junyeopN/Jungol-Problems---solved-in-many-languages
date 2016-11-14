@@ -18,16 +18,17 @@ class CircularLinkedList
 {
 
     public:
+        CircularLinkedList(int input);
     
         int get_value();
     
         void set_value(int input);
 
-        CircularLinkedList get_prev();
+        CircularLinkedList* get_prev();
         
         void set_prev(CircularLinkedList input);
         
-        CircularLinkedList get_next();
+        CircularLinkedList* get_next();
         
         void set_next(CircularLinkedList input);
         
