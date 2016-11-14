@@ -1,5 +1,5 @@
 /*
- * A header file that defines a doubly linked list
+ * A header file that defines a circular linked list
  * that will be used in our solution for the Erathosthenes problem.
  * A doubly linked list is a node with a value and two pointers,
  * which are the node that follows this node and the node that
@@ -14,7 +14,7 @@
 #ifndef DOUBLYLINKEDLIST_H
 #define DOUBLYLINKEDLIST_H
 
-class DoublyLinkedList
+class DoublyLinkedList;
 {
 
     public:
