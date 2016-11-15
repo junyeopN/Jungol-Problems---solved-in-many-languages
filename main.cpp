@@ -61,7 +61,70 @@ int main()
          end = temp;
     }
     
-    cout<< end->get_value() << endl;
+    
+    /*
+     * Now the N - 1 nodes containing values
+     * 2 ~ N are linked together in increasing order of their value.
+     * We now simulate the Erathosthene's algorithm of finding
+     * prime numbers to find out the kth deleted number.
+     */
+     
+     int prime_number;
+     int erase_cnt = 0;
+     
+     /*
+      * We store the number that is becoming the axis of the deleting
+      * process in prime_number.
+      */
+     
+     DoublyLinkedList temp_head = head;
+     
+
+     
+
+     
+
+     
+     
+     while(temp != NULL)
+     {
+        prime_number = head.value;
+        temp = head.next; 
+        
+       /*
+        * We picked the head node as the first prime number,
+        * so we need to remove the current head node
+        * and make the next node the new head.
+        */ 
+         
+        head = head.next;
+        disconnect(temp_head);
+         
+        
+        while(temp != NULL)
+        {
+            if(temp.value % prime_number == 0)
+            {
+                /*
+                 * Numbers that are divisible by the current prime number.
+                 * we erase this node from the table and then raise the value
+                 * of erase_cnt by 1.
+                 */
+                 
+                 disconnect(temp);
+                 erase_cnt++;
+            }
+        }
+        
+        /*
+         * The inner while loop ends when temp reaches the end of the
+         * list. So if the inner while loop ends, it means we need to
+         * find the next 
+         */
+         
+
+         
+     }
     
     return 0;
 }
